@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPC.UserService.V1";
+package Services;
+
+
+service UserService {
+  rpc GetUserInfo (UserRequest) returns (UserResponse);
+}
+
+message UserRequest {
+  string user_id = 1;
+}
+
+message UserResponse {
+  string user_id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string user_name = 4;
+  string phone_number = 5;
+  string email = 6;
+  string address = 7;
+  string post_code = 8;
+  string birthday = 9;
+}
