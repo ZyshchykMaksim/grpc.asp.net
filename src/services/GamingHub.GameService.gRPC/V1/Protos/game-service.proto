@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option csharp_namespace = "gRPC.GameService.V1";
+option csharp_namespace = "GamingHub.GameService.gRPC.V1";
 
 package Services;
 

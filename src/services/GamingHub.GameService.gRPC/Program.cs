@@ -1,5 +1,5 @@
-using gRPC.GameService.V1.Services;
-using gRPC.GameService.V1.Stores;
+using GamingHub.GameService.gRPC.V1.Services;
+using GamingHub.GameService.gRPC.V1.Stores;
 
 var builder = WebApplication.CreateBuilder(args);
 

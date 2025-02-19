@@ -17,8 +17,8 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-builder.Services.AddScoped<gRPC.UserService.V1.Services.UserService>();
-builder.Services.AddSingleton<gRPC.UserService.V1.Stores.UserStore>();
+builder.Services.AddScoped<GamingHub.UserService.gRPC.V1.Services.UserService>();
+builder.Services.AddSingleton<GamingHub.UserService.gRPC.V1.Stores.UserStore>();
 
 var app = builder.Build();
 
@@ -35,6 +35,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
-app.MapGrpcService<gRPC.UserService.V1.Services.UserService>();
+app.MapGrpcService<GamingHub.UserService.gRPC.V1.Services.UserService>();
 
 app.Run();

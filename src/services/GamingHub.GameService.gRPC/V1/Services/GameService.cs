@@ -1,8 +1,8 @@
 using AutoMapper;
+using GamingHub.GameService.gRPC.V1.Stores;
 using Grpc.Core;
-using gRPC.GameService.V1.Stores;
 
-namespace gRPC.GameService.V1.Services;
+namespace GamingHub.GameService.gRPC.V1.Services;
 
 public class GameService : V1.GameService.GameServiceBase
 {

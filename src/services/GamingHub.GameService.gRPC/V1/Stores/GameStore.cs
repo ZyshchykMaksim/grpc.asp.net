@@ -1,4 +1,4 @@
-namespace gRPC.GameService.V1.Stores;
+namespace GamingHub.GameService.gRPC.V1.Stores;
 
 /// <summary>
 /// Represents a game store that manages a collection of games.

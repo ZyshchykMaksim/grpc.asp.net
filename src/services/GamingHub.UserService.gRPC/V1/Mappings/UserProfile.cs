@@ -1,8 +1,8 @@
 using System.Globalization;
 using AutoMapper;
-using gRPC.UserService.V1.Stores;
+using GamingHub.UserService.gRPC.V1.Stores;
 
-namespace gRPC.UserService.V1.Mappings;
+namespace GamingHub.UserService.gRPC.V1.Mappings;
 
 /// <inheritdoc cref="Profile"/>
 public class UserProfile : Profile

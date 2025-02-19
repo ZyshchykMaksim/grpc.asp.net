@@ -1,4 +1,4 @@
-namespace gRPC.UserService.V1.Stores;
+namespace GamingHub.UserService.gRPC.V1.Stores;
 
 /// <summary>
 /// Represents a store of user information.
