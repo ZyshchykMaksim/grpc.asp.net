@@ -5,7 +5,7 @@ package Services;
 
 
 service UserService {
-  rpc GetUserInfo (UserRequest) returns (UserResponse);
+  rpc GetUserInfoAsync (UserRequest) returns (UserResponse);
 }
 
 message UserRequest {

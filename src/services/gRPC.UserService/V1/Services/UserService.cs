@@ -22,7 +22,7 @@ public class UserService : V1.UserService.UserServiceBase
     }
 
     /// <inheritdoc />
-    public override async Task<UserResponse> GetUserInfo(UserRequest request, ServerCallContext context)
+    public override async Task<UserResponse> GetUserInfoAsync(UserRequest request, ServerCallContext context)
     {
         try
         {

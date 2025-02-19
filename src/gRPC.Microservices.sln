@@ -1,9 +1,27 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{B7C23CDA-49DC-4E43-9C55-1769DC589AA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPC.UserService", "services\gRPC.UserService\gRPC.UserService.csproj", "{7647B2EC-A254-45E6-8DDC-DDC01C38CB4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPC.GameService", "services\gRPC.GameService\gRPC.GameService.csproj", "{00B5500F-D8E3-4AC7-B05B-FF0CB6D05C68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7647B2EC-A254-45E6-8DDC-DDC01C38CB4E} = {B7C23CDA-49DC-4E43-9C55-1769DC589AA7}
+		{00B5500F-D8E3-4AC7-B05B-FF0CB6D05C68} = {B7C23CDA-49DC-4E43-9C55-1769DC589AA7}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7647B2EC-A254-45E6-8DDC-DDC01C38CB4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7647B2EC-A254-45E6-8DDC-DDC01C38CB4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7647B2EC-A254-45E6-8DDC-DDC01C38CB4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7647B2EC-A254-45E6-8DDC-DDC01C38CB4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00B5500F-D8E3-4AC7-B05B-FF0CB6D05C68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00B5500F-D8E3-4AC7-B05B-FF0CB6D05C68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00B5500F-D8E3-4AC7-B05B-FF0CB6D05C68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00B5500F-D8E3-4AC7-B05B-FF0CB6D05C68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

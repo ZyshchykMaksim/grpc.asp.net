@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPC.GameService.V1";
+
+package Services;
+
+service GameService {
+  rpc GetGameById (GetGameByIdRequest) returns (GameResponse);
+  rpc GetGames (GetGamesRequest) returns (GamesResponse);
+  rpc CreateGame(CreateGameRequest) returns (GameResponse);
+  rpc UpdateGame (UpdateGameRequest) returns (GameResponse);
+  rpc DeleteGame (DeleteGameRequest) returns (GameResponse);
+}
+
+message GetGameByIdRequest {
+  string game_id = 1;
+}
+
+message GetGamesRequest {
+  optional string name = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+}
+
+message CreateGameRequest {
+  string name = 1;
+  string description = 2;
+}
+
+message UpdateGameRequest {
+  string game_id = 1;
+  string name = 2;
+  string description = 3;
+}
+
+message DeleteGameRequest {
+  string game_id = 1;
+}
+
+message GameResponse {
+  string game_id = 1;
+  string name = 2;
+  string description = 3;
+  string created_at = 4;
+  GameStatus status = 5;
+}
+
+message GamesResponse {
+  repeated GameResponse items = 1;
+}
+
+enum GameStatus
+{
+  Disabled = 0;
+  Active = 1;
+  Expired = 2;
+  Deleted = 3;
+}
