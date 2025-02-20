@@ -20,11 +20,12 @@ public class UserStore
                 LastName = "Johnson",
                 FirstName = "Alice",
                 UserName = "alice_j",
-                PhoneNumber = "+1234567890",
+                PhoneNumber = "+15005550000",
                 Email = "alice.johnson@example.com",
                 Address = "123 Maple St, Springfield",
                 PostCode = "12345",
-                Birthday = new DateTime(1999, 5, 14)
+                Birthday = new DateTime(1999, 5, 14),
+                Status = UserStatus.Active
             },
 
             new UserStoreItem
@@ -37,7 +38,8 @@ public class UserStore
                 Email = "bob.smith@example.com",
                 Address = "456 Oak St, Springfield",
                 PostCode = "12346",
-                Birthday = new DateTime(1994, 9, 23)
+                Birthday = new DateTime(1994, 9, 23),
+                Status = UserStatus.Active
             },
 
             new UserStoreItem
@@ -50,7 +52,8 @@ public class UserStore
                 Email = "charlie.brown@example.com",
                 Address = "789 Pine St, Springfield",
                 PostCode = "12347",
-                Birthday = new DateTime(2001, 3, 11)
+                Birthday = new DateTime(2001, 3, 11),
+                Status = UserStatus.Active
             },
 
             new UserStoreItem
@@ -63,7 +66,8 @@ public class UserStore
                 Email = "david.clark@example.com",
                 Address = "159 Birch St, Springfield",
                 PostCode = "12348",
-                Birthday = new DateTime(1989, 7, 19)
+                Birthday = new DateTime(1989, 7, 19),
+                Status = UserStatus.Active
             },
 
             new UserStoreItem
@@ -76,7 +80,8 @@ public class UserStore
                 Email = "eve.adams@example.com",
                 Address = "753 Cedar St, Springfield",
                 PostCode = "12349",
-                Birthday = new DateTime(1992, 11, 25)
+                Birthday = new DateTime(1992, 11, 25),
+                Status = UserStatus.Active
             },
 
             new UserStoreItem
@@ -89,7 +94,8 @@ public class UserStore
                 Email = "frank.wilson@example.com",
                 Address = "852 Elm St, Springfield",
                 PostCode = "12350",
-                Birthday = new DateTime(1987, 4, 7)
+                Birthday = new DateTime(1987, 4, 7),
+                Status = UserStatus.Active
             },
 
             new UserStoreItem
@@ -102,7 +108,8 @@ public class UserStore
                 Email = "grace.lee@example.com",
                 Address = "369 Willow St, Springfield",
                 PostCode = "12351",
-                Birthday = new DateTime(1998, 8, 14)
+                Birthday = new DateTime(1998, 8, 14),
+                Status = UserStatus.Active
             },
 
             new UserStoreItem
@@ -115,7 +122,8 @@ public class UserStore
                 Email = "henry.scott@example.com",
                 Address = "951 Aspen St, Springfield",
                 PostCode = "12352",
-                Birthday = new DateTime(1995, 6, 20)
+                Birthday = new DateTime(1995, 6, 20),
+                Status = UserStatus.Active
             },
 
             new UserStoreItem
@@ -128,7 +136,8 @@ public class UserStore
                 Email = "ivy.walker@example.com",
                 Address = "357 Redwood St, Springfield",
                 PostCode = "12353",
-                Birthday = new DateTime(2000, 1, 17)
+                Birthday = new DateTime(2000, 1, 17),
+                Status = UserStatus.Active
             },
 
             new UserStoreItem
@@ -141,7 +150,8 @@ public class UserStore
                 Email = "jack.moore@example.com",
                 Address = "753 Chestnut St, Springfield",
                 PostCode = "12354",
-                Birthday = new DateTime(1991, 10, 9)
+                Birthday = new DateTime(1991, 10, 9),
+                Status = UserStatus.Active
             }
         ]);
     }
@@ -195,5 +205,21 @@ public class UserStore
         /// Gets or sets the date of birth of the user.
         /// </summary>
         public DateTime Birthday { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the current status of the user.
+        /// </summary>
+        public UserStatus Status { get; set; }
+    }
+    
+    /// <summary>
+    /// Defines possible statuses for users in the store.
+    /// </summary>
+    public enum UserStatus
+    {
+        Disabled = 0,
+        Active = 1,
+        Expired = 2,
+        Deleted = 3
     }
 }

@@ -22,7 +22,7 @@ public class UserService : V1.UserService.UserServiceBase
     }
 
     /// <inheritdoc />
-    public override async Task<UserResponse> GetUserInfoAsync(UserRequest request, ServerCallContext context)
+    public override async Task<UserResponse> GetUserById(GetUserByIdRequest request, ServerCallContext context)
     {
         try
         {
@@ -34,6 +34,26 @@ public class UserService : V1.UserService.UserServiceBase
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error when getting a user with ID: {UserId}", request.UserId);
+            throw;
+        }
+    }
+
+    /// <inheritdoc />
+    public override async Task<UserResponse> GetUserByPhoneNumber(GetUserByPhoneNumberRequest request,
+        ServerCallContext context)
+    {
+        try
+        {
+            var users = await _userStore.GetUsersSync();
+            var user = users.FirstOrDefault(x => x.PhoneNumber.Contains(
+                request.PhoneNumber,
+                StringComparison.CurrentCultureIgnoreCase));
+
+            return await Task.FromResult(_mapper.Map<UserStore.UserStoreItem, UserResponse>(user));
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error when getting a user with phone number: {PhoneNumber}", request.PhoneNumber);
             throw;
         }
     }
