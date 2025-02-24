@@ -20,6 +20,7 @@ builder.Services.Configure<UserServiceOptions>(builder.Configuration.GetSection(
 
 // Add services to the container.
 builder.Services.AddControllers();
+builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddIdentityServer()
     .AddDeveloperSigningCredential()
     .AddInMemoryApiScopes(IdentityConfig.ApiScopes)

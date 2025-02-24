@@ -3,8 +3,11 @@ syntax = "proto3";
 option csharp_namespace = "GamingHub.UserService.gRPC.V1";
 package Services;
 
+import "common.proto";
+
 service UserService {
   rpc GetUserById (GetUserByIdRequest) returns (UserResponse);
+  rpc GetUserByIdV2 (GetUserByIdRequest) returns (common.ResponseDataModel);
   rpc GetUserByPhoneNumber(GetUserByPhoneNumberRequest) returns (UserResponse);
 }
 

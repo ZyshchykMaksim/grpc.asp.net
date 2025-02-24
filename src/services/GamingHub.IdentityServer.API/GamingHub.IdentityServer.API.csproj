@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="14.0.0" />
         <PackageReference Include="Ardalis.GuardClauses" Version="5.0.0" />
         <PackageReference Include="Duende.IdentityServer" Version="7.1.0" />
         <PackageReference Include="Duende.IdentityServer.Configuration" Version="7.1.0" />
@@ -41,7 +42,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Protobuf Include="V1\Protos\user-service.proto" GrpcServices="Client" />
+        <Protobuf Include="V1\Protos\user-service.proto" AdditionalImportDirs="..\GamingHub.Service.Shared\gRPC\Protos" GrpcServices="Client" />
     </ItemGroup>
 
 </Project>

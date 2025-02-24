@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "GamingHub.Service.Shared.gRPC";
+package common;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/any.proto";
+
+message ResponseDataModel {
+  google.protobuf.Timestamp server_time = 1;
+  ResponseErrorModel error = 2;
+  google.protobuf.Any data = 3;
+}
+
+message ResponseErrorModel {
+  string message = 1;
+  int32 code = 2;
+  google.protobuf.Any details = 3;
+}

@@ -1,4 +1,5 @@
 ﻿using Ardalis.GuardClauses;
+using AutoMapper;
 using Duende.IdentityModel;
 using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Validation;
@@ -24,6 +25,7 @@ namespace GamingHub.IdentityServer.API.V1.Validators.Implementation
         private readonly IPhoneNumberValidator _phoneNumberValidator;
         private readonly IRedisCachingProvider _redisCachingProvider;
         private readonly IWebHostEnvironment _env;
+        private readonly IMapper _mapper;
         private readonly ILogger<PhoneNumberTokenGrantValidator> _logger;
         
         /// <inheritdoc cref="IExtensionGrantValidator"/>
@@ -38,6 +40,7 @@ namespace GamingHub.IdentityServer.API.V1.Validators.Implementation
             IDateTimeProvider dateTimeProvider,
             IEasyCachingProviderFactory cachingProviderFactory,
             IOptions<RedisCacheOptions> redisCacheOptions,
+            IMapper mapper,
             IWebHostEnvironment env,
             ILogger<PhoneNumberTokenGrantValidator> logger)
         {
@@ -49,6 +52,7 @@ namespace GamingHub.IdentityServer.API.V1.Validators.Implementation
             _userServiceClient = Guard.Against.Null(userServiceClient, nameof(userServiceClient));
             _phoneNumberValidator = Guard.Against.Null(phoneNumberValidator, nameof(phoneNumberValidator));
             _dateTimeProvider = Guard.Against.Null(dateTimeProvider, nameof(dateTimeProvider));
+            _mapper = Guard.Against.Null(mapper, nameof(mapper));
             _env = Guard.Against.Null(env, nameof(env));
             _logger = Guard.Against.Null(logger, nameof(logger));
         }
@@ -91,7 +95,7 @@ namespace GamingHub.IdentityServer.API.V1.Validators.Implementation
             {
                 PhoneNumber = phoneNumber
             });
-
+            
             if (user == null)
             {
                 context.Result = new GrantValidationResult(
@@ -137,7 +141,7 @@ namespace GamingHub.IdentityServer.API.V1.Validators.Implementation
             }
 
             context.Result = new GrantValidationResult(
-                user.UserId.ToString(), 
+                user.UserId, 
                 AuthConstants.CONFIRMATION_BY_SMS);
         }
     }

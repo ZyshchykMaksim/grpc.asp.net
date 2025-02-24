@@ -33,7 +33,11 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Protobuf Include="V1\Protos\user-service.proto" GrpcServices="Server" />
+        <Protobuf Include="V1\Protos\user-service.proto" AdditionalImportDirs="..\GamingHub.Service.Shared\gRPC\Protos" GrpcServices="Server" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GamingHub.Service.Shared\GamingHub.Service.Shared.csproj" />
     </ItemGroup>
 
 </Project>
