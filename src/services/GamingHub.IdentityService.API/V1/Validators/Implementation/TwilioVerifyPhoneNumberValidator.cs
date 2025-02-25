@@ -1,9 +1,9 @@
 ﻿using Ardalis.GuardClauses;
-using GamingHub.IdentityServer.API.Configuration;
-using GamingHub.IdentityServer.API.V1.Providers;
+using GamingHub.IdentityService.API.Configuration;
+using GamingHub.IdentityService.API.V1.Providers;
 using Microsoft.Extensions.Options;
 
-namespace GamingHub.IdentityServer.API.V1.Validators.Implementation
+namespace GamingHub.IdentityService.API.V1.Validators.Implementation
 {
     /// <summary>
     /// The interface allows to validate a phone number via SMS code using Twilio Verify SDK.

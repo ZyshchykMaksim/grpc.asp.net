@@ -4,16 +4,16 @@ using Duende.IdentityModel;
 using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Validation;
 using EasyCaching.Core;
-using GamingHub.IdentityServer.API.Configuration;
-using GamingHub.IdentityServer.API.Constants;
-using GamingHub.IdentityServer.API.V1.Helpers;
+using GamingHub.IdentityService.API.Configuration;
+using GamingHub.IdentityService.API.Constants;
+using GamingHub.IdentityService.API.V1.Helpers;
 using GamingHub.Service.Shared.Extensions;
 using GamingHub.Service.Shared.Providers;
 using GamingHub.UserService.gRPC.V1;
 using Microsoft.Extensions.Options;
 using UserServiceClient = GamingHub.UserService.gRPC.V1.UserService.UserServiceClient;
 
-namespace GamingHub.IdentityServer.API.V1.Validators.Implementation
+namespace GamingHub.IdentityService.API.V1.Validators.Implementation
 {
     /// <summary>
     /// Custom PhoneNumberToken grant flow.

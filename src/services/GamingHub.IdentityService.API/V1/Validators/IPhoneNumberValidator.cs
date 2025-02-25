@@ -1,4 +1,4 @@
-﻿namespace GamingHub.IdentityServer.API.V1.Validators
+﻿namespace GamingHub.IdentityService.API.V1.Validators
 {
     /// <summary>
     /// The interface allows to validate a phone number by unique code.

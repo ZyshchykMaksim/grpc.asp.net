@@ -1,4 +1,4 @@
-﻿namespace GamingHub.IdentityServer.API.V1.Helpers
+﻿namespace GamingHub.IdentityService.API.V1.Helpers
 {
     /// <summary>
     /// Class manages test phone numbers

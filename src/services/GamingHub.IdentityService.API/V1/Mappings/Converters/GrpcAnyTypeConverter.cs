@@ -5,7 +5,7 @@ using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using Type = System.Type;
 
-namespace GamingHub.IdentityServer.API.V1.Mappings.Converters;
+namespace GamingHub.IdentityService.API.V1.Mappings.Converters;
 
 public class GrpcAnyTypeConverter : IValueConverter<object?, Any?>, IValueConverter<Any?, object?>
 {

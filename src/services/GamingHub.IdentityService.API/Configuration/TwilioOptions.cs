@@ -1,4 +1,4 @@
-﻿namespace GamingHub.IdentityServer.API.Configuration
+﻿namespace GamingHub.IdentityService.API.Configuration
 {
     /// <summary>
     /// The class provides information about options for Twilio.

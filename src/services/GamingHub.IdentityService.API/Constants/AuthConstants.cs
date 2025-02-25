@@ -1,4 +1,4 @@
-﻿namespace GamingHub.IdentityServer.API.Constants
+﻿namespace GamingHub.IdentityService.API.Constants
 {
     /// <summary>
     /// The class provides information about authentication constants.

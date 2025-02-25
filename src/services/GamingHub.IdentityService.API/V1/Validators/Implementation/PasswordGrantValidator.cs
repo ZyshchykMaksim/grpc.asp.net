@@ -1,7 +1,7 @@
 ﻿using Duende.IdentityServer.Models;
 using Duende.IdentityServer.Validation;
 
-namespace GamingHub.IdentityServer.API.V1.Validators.Implementation
+namespace GamingHub.IdentityService.API.V1.Validators.Implementation
 {
     /// <summary>
     /// Custom Resource Owner Password Validator

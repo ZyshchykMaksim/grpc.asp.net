@@ -4,7 +4,7 @@ using GamingHub.Service.Shared.Models;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 
-namespace GamingHub.IdentityServer.API.V1.Mappings.Converters;
+namespace GamingHub.IdentityService.API.V1.Mappings.Converters;
 
 public class GrpcDataConverter<T> :
     ITypeConverter<ResponseDataModel<T>, ResponseDataModel>,

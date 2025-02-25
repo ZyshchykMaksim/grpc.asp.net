@@ -1,9 +1,9 @@
 using AutoMapper;
-using GamingHub.IdentityServer.API.V1.Mappings.Converters;
+using GamingHub.IdentityService.API.V1.Mappings.Converters;
 using GamingHub.Service.Shared.gRPC;
 using GamingHub.Service.Shared.Models;
 
-namespace GamingHub.IdentityServer.API.V1.Mappings;
+namespace GamingHub.IdentityService.API.V1.Mappings;
 
 /// <summary>
 /// Profile with <see cref="CommonProfile"/> automapper mappings.

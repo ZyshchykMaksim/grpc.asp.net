@@ -5,9 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingHub.UserService.gRPC"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingHub.GameService.gRPC", "services\GamingHub.GameService.gRPC\GamingHub.GameService.gRPC.csproj", "{00B5500F-D8E3-4AC7-B05B-FF0CB6D05C68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingHub.IdentityServer.API", "services\GamingHub.IdentityServer.API\GamingHub.IdentityServer.API.csproj", "{F9C8B834-4758-41EB-8E2D-2D75DEA86349}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingHub.IdentityService.API", "services\GamingHub.IdentityService.API\GamingHub.IdentityService.API.csproj", "{F9C8B834-4758-41EB-8E2D-2D75DEA86349}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingHub.Service.Shared", "services\GamingHub.Service.Shared\GamingHub.Service.Shared.csproj", "{08A70647-B829-432A-8206-C39AD0A00A73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamingHub.GatewayService.API", "services\GamingHub.GatewayService.API\GamingHub.GatewayService.API.csproj", "{6E01D0C2-942A-46D0-90A1-A1F4AB964C7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +21,7 @@ Global
 		{00B5500F-D8E3-4AC7-B05B-FF0CB6D05C68} = {B7C23CDA-49DC-4E43-9C55-1769DC589AA7}
 		{F9C8B834-4758-41EB-8E2D-2D75DEA86349} = {B7C23CDA-49DC-4E43-9C55-1769DC589AA7}
 		{08A70647-B829-432A-8206-C39AD0A00A73} = {B7C23CDA-49DC-4E43-9C55-1769DC589AA7}
+		{6E01D0C2-942A-46D0-90A1-A1F4AB964C7C} = {B7C23CDA-49DC-4E43-9C55-1769DC589AA7}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7647B2EC-A254-45E6-8DDC-DDC01C38CB4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -37,5 +40,9 @@ Global
 		{08A70647-B829-432A-8206-C39AD0A00A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08A70647-B829-432A-8206-C39AD0A00A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08A70647-B829-432A-8206-C39AD0A00A73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E01D0C2-942A-46D0-90A1-A1F4AB964C7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E01D0C2-942A-46D0-90A1-A1F4AB964C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E01D0C2-942A-46D0-90A1-A1F4AB964C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E01D0C2-942A-46D0-90A1-A1F4AB964C7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

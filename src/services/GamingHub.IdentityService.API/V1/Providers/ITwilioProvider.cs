@@ -1,4 +1,4 @@
-﻿namespace GamingHub.IdentityServer.API.V1.Providers
+﻿namespace GamingHub.IdentityService.API.V1.Providers
 {
     /// <summary>
     /// The interface allows to use Twilio's features.

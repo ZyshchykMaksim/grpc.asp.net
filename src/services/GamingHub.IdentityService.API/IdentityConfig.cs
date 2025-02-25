@@ -1,7 +1,7 @@
 using Duende.IdentityServer.Models;
-using GamingHub.IdentityServer.API.Constants;
+using GamingHub.IdentityService.API.Constants;
 
-namespace GamingHub.IdentityServer.API;
+namespace GamingHub.IdentityService.API;
 
 public class IdentityConfig
 {

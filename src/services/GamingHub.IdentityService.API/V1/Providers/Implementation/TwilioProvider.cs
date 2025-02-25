@@ -1,11 +1,11 @@
 ﻿using Ardalis.GuardClauses;
-using GamingHub.IdentityServer.API.Configuration;
+using GamingHub.IdentityService.API.Configuration;
 using Microsoft.Extensions.Options;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 using Twilio.Rest.Verify.V2.Service;
 
-namespace GamingHub.IdentityServer.API.V1.Providers.Implementation
+namespace GamingHub.IdentityService.API.V1.Providers.Implementation
 {
     /// <summary>
     /// The class allows to use Twilio's features.
